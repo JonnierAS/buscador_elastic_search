@@ -3,6 +3,7 @@ import Map, {NavigationControl } from 'react-map-gl/maplibre';
 import maplibregl from "maplibre-gl";
 import AddressSearchModal from "./buscador/AddressSearchModal";
 import { useLocalState } from "../context/GlobalState";
+import CompleteSearchAddress from "./buscador/completeSearchAddress";
 
 export const MapContainer = () => {
   const {setMapRef} = useLocalState()
@@ -28,6 +29,7 @@ export const MapContainer = () => {
       > 
         <NavigationControl position='top-left' />  
         <AddressSearchModal />
+        <CompleteSearchAddress />
       </Map>
     </div>
   )
