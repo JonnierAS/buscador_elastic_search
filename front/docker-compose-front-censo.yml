@@ -1,0 +1,9 @@
+services:
+  buscador_elastic:
+    container_name: buscador_elastic
+    image: buscador_elastic
+    build: .
+    ports:
+      - "9201:9201"
+    env_file:
+      - .env
