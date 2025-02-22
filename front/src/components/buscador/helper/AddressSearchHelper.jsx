@@ -42,7 +42,7 @@ export const AddressSearchHelper = () => {
                         "must": [
                             { "term": { "cod_departament.keyword": params.formattedDepartment } },
                             { "term": { "cod_province.keyword": params.formattedProvince } },
-                            { "match": { "cod_district.keyword": { "query": params.formattedDistrict, "fuzziness": "AUTO"  }  }},
+                            { "match": { "cod_district": { "query": params.formattedDistrict, "fuzziness": "AUTO"  }  }},
                             { "match": {  "name": {  "query": params.streetName,  "fuzziness": "AUTO"  }   } }
                         ],
                         ...(params.number ? { 
